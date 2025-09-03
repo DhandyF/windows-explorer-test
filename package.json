@@ -1,0 +1,18 @@
+{
+  "name": "windows-explorer-test",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "echo \"Run either: bun run dev:api OR bun run dev:web\"",
+    "dev:api": "bun --cwd apps/api run dev",
+    "dev:web": "bun --cwd apps/web run dev",
+    "build": "echo \"Run either: bun run build:api OR bun run build:web\"",
+    "build:api": "bun --cwd apps/api run build",
+    "build:web": "bun --cwd apps/web run build",
+    "start": "echo \"Run either: bun run start:api OR bun run start:web\"",
+    "start:api": "bun --cwd apps/api run start",
+    "start:web": "bun --cwd apps/web run preview"
+  }
+}
