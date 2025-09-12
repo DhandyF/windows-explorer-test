@@ -69,14 +69,7 @@ function keyOf(item) { return `${('file_type' in item) ? 'file' : 'folder'}-${it
 function onItemClick(item, e) {
   const k = keyOf(item)
   const next = new Set(selectedKeys.value)
-  
-  if (e?.ctrlKey || e?.metaKey) {
-    next.has(k) ? next.delete(k) : next.add(k)
-  } else if (e?.shiftKey && selectedKeys.value.size > 0) {
-    next.clear(); next.add(k)
-  } else {
-    next.clear(); next.add(k)
-  }
+
   selectedKeys.value = next
   emit('open-folder', item)
 }
